@@ -32,8 +32,8 @@
         "name": "Chainsaw Imp",
         "element": "Dark",
         "effect": "Gains 200 ATK for each Spirit on your opponent's side of the field. This card can attack all Spirits your opponent controls once each.",
-        "cost": 0,
-        "costType": "Blood",
+        "resource_Cost": 0,
+        "resource_Type": "Blood",
         "species": "Fiend",
         "attack": 1200,
         "defense": 100
@@ -42,8 +42,8 @@
         "name": "Deep Sea Kraken",
         "element": "Water",
         "effect": "Immune to enemy spells while in Ocean field.",
-        "cost": 0,
-        "costType": "Blood",
+        "resource_Cost": 0,
+        "resource_Type": "Blood",
         "species": "Fish",
         "attack": 1400,
         "defense": 800
@@ -52,8 +52,8 @@
         "name": "Atlantean Warrior",
         "element": "Water",
         "effect": "Unaffected by opponent's spells while in Ocean field",
-        "cost": "0",
-        "costType": "Blood",
+        "resource_Cost": "0",
+        "resource_Type": "Blood",
         "species": "Warrior",
         "attack": 1600,
         "defense": 1200
@@ -62,8 +62,8 @@
         "name": "Elf Swordsman",
         "element": "Earth",
         "effect": "Gain 500 ATK while in Forest field.",
-        "cost": 0,
-        "costType": "Blood",
+        "resource_Cost": 0,
+        "resource_Type": "Blood",
         "species": "Warrior",
         "attack": 1400,
         "defense": 1200
@@ -71,9 +71,9 @@
       {
         "name": "Hydra",
         "element": "Fire",
-        "effect": "Summon 2 Hydra Head tokens to adjacent locations (Fire/Dragon/0 cost/1000 atk/0 def).",
-        "cost": 1,
-        "costType": "Blood",
+        "effect": "Summon 2 Hydra Head tokens to adjacent locations (Fire/Dragon/0 resource_Cost/1000 atk/0 def).",
+        "resource_Cost": 1,
+        "resource_Type": "Blood",
         "species": "Dragon",
         "attack": 2000,
         "defense": 1600
@@ -84,33 +84,33 @@
         "name": "Element Blade",
         "element": "Light",
         "effect": "Change the equipped monster's attribute to one of your choice.",
-        "cost": 2,
-        "costType": "Mana",
-        "spellType": "Equipment"
+        "resource_Cost": 2,
+        "resource_Type": "Mana",
+        "spell_Type": "Equipment"
       },
       {
         "name": "Soul Reaper",
         "element": "Dark",
         "effect": "When the equipped monster destroys a monster by battle, gain 1 Mana.",
-        "cost": 1,
-        "costType": "Blood",
-        "spellType": "Equipment"
+        "resource_Cost": 1,
+        "resource_Type": "Blood",
+        "spell_Type": "Equipment"
       },
       {
         "name": "Reroll",
         "element": "Dark",
         "effect": "Discard your hand (min. 1 card), then draw 5 cards.",
-        "cost": 2,
-        "costType": "Mana",
-        "spellType": "Legend"
+        "resource_Cost": 2,
+        "resource_Type": "Mana",
+        "spell_Type": "Legend"
       },
       {
         "name": "Flood",
         "element": "Water",
         "effect": "Change 1 location to Ocean",
-        "cost": 3,
-        "costType": "Mana",
-        "spellType": "Legend"
+        "resource_Cost": 3,
+        "resource_Type": "Mana",
+        "spell_Type": "Legend"
       }
     ]
   }

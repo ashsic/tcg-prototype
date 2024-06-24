@@ -1,48 +1,70 @@
+from enum import Enum
+
+class ResourceType(Enum):
+  BLOOD = "Blood"
+  MANA = "Mana"
+
 class Card:
     def __init__(
-            self, name: str, 
-            description: str, 
-            species: list, 
-            cost: int, 
-            cost_type: int, # blood or mana 
-            attack: int, 
-            defence: int, 
-            element: str, 
-            effect: str
-            ):
+        self,
+        name: str,
+        element: str,
+        effect: str,
+        resource_cost: int,
+        resource_type: ResourceType,
+    ):
         self._name = name
-        self._description = description
-        self._card_type = card_type
-        self._mana_cost = mana_cost
+        self._element = element
+        self._effect = effect
+        self._resource_cost = resource_cost
+        self._resource_type = resource_type
 
     @property
     def name(self):
         return self._name
 
     @name.setter
-    def name(self, value):
-        self._name = value
+    def name(self, new_name: str):
+        if not isinstance(new_name, str):
+            raise TypeError("Card name must be a string")
+        self._name = new_name
 
     @property
-    def description(self):
-        return self._description
+    def element(self):
+        return self._element
 
-    @description.setter
-    def description(self, value):
-        self._description = value
-
-    @property
-    def card_type(self):
-        return self._type
-
-    @card_type.setter
-    def type(self, value):
-        self._card_type = value
+    @element.setter
+    def element(self, new_element: str):
+        if not isinstance(new_element, str):
+            raise TypeError("Card element must be a string")
+        self._element = new_element
 
     @property
-    def mana_cost(self):
-        return self._mana_cost
+    def effect(self):
+        return self._effect
 
-    @mana_cost.setter
-    def mana_cost(self, value):
-        self._mana_cost = value
+    @effect.setter
+    def effect(self, new_effect: str):
+        if not isinstance(new_effect, str):
+            raise TypeError("Card effect must be a string")
+        self._effect = new_effect
+
+    @property
+    def resource_cost(self):
+        return self._resource_cost
+
+    @resource_cost.setter
+    def resource_cost(self, new_cost: int):
+        if not isinstance(new_cost, int) or new_cost < 0:
+            raise ValueError("Card resource cost must be a non-negative integer")
+        self._resource_cost = new_cost
+
+    @property
+    def resource_type(self):
+        return self._resource_type
+
+    @resource_type.setter
+    def resource_type(self, new_type: ResourceType):
+        if not isinstance(new_type, ResourceType):
+            raise TypeError("Card resource type must be a member of the ResourceType enum")
+        self._resource_type = new_type

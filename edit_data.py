@@ -46,11 +46,11 @@ while True:
         if cardMenuSelect == "1":
             dl.append_Json(new_Object, ["fields"])
         else:
-            new_Object["cost"] = int(input("Enter the cost: "))
-            new_Object["costType"] = input("Enter the cost type (blood/mana): ").capitalize()
+            new_Object["resource_Cost"] = int(input("Enter the resource cost: "))
+            new_Object["resource_Type"] = input("Enter the resource type (blood/mana): ").capitalize()
 
             if cardMenuSelect == "2":
-                new_Object["spellType"] = input("Enter a spell type (equipment, legend, etc.): ").capitalize()
+                new_Object["spell_Type"] = input("Enter a spell type (equipment, legend, etc.): ").capitalize()
                 dl.append_Json(new_Object, ["cards", "spells"])
 
             elif cardMenuSelect == "3":
